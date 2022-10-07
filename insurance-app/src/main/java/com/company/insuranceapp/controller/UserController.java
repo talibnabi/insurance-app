@@ -1,4 +1,4 @@
 package com.company.insuranceapp.controller;
 
-public class Main {
+public class UserController {
 }

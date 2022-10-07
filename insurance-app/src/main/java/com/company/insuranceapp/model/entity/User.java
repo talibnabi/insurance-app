@@ -9,8 +9,12 @@ import javax.persistence.*;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
+import java.util.Set;
 
 import static com.company.insuranceapp.model.entity.User.TABLE_NAME;
+import static javax.persistence.CascadeType.MERGE;
+import static javax.persistence.CascadeType.PERSIST;
+import static javax.persistence.FetchType.EAGER;
 
 @Entity
 @Getter
@@ -66,6 +70,12 @@ public class User {
     @CreationTimestamp
     @Column(name = "created_date", updatable = false, nullable = false)
     private LocalDateTime createdDate;
+
+    @ManyToMany(fetch = EAGER, cascade = {PERSIST, MERGE})
+    @JoinTable(name = "users_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
 
     @Override
     public boolean equals(Object o) {

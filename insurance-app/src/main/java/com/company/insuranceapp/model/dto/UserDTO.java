@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 
 @Data
@@ -25,4 +26,5 @@ public class UserDTO {
     private Boolean accountNonExpired;
     private Boolean credentialsNonExpired;
     private LocalDateTime createdDate;
+    private Set<RoleDTO> roles;
 }
