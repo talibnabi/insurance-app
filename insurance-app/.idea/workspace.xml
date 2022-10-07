@@ -10,6 +10,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -67,7 +70,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "settings.editor.selected.configurable": "editor.preferences.import"
   }
 }]]></component>
   <component name="RunManager">
@@ -88,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665143036926</updated>
       <workItem from="1665143038409" duration="1745000" />
-      <workItem from="1665145576748" duration="25123000" />
+      <workItem from="1665145576748" duration="27579000" />
     </task>
     <servers />
   </component>

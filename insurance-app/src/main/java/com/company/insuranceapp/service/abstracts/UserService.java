@@ -9,5 +9,7 @@ public interface UserService {
 
     UserDTO getByUserId(Long id);
 
+    UserDTO getByUsername (String username);
+
     User findByUserId(Long id);
 }

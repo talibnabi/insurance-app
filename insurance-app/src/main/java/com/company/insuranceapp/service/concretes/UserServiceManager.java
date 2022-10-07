@@ -43,6 +43,11 @@ public class UserServiceManager implements UserService {
     }
 
     @Override
+    public UserDTO getByUsername(String username) {
+        return mapper.toDto(userRepository.findByUsername(username).orElse(null));
+    }
+
+    @Override
     public User findByUserId(Long id) {
         return userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
     }
