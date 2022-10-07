@@ -24,10 +24,14 @@ public class RoleServiceManager implements RoleService {
 
     @Override
     public RoleDTO createRole(RoleRequest request) {
-        if (doesExistBy(request.getRoleType()))
+        if (
+                doesExistBy(request
+                        .getRoleType()))
             throw new ResourceExistsException("Role", "roleType", request.getRoleType());
-        Role role = repository.save(mapper.toEntity(request));
-        return mapper.toDto(role);
+        Role role = repository
+                .save(mapper.toEntity(request));
+        return mapper
+                .toDto(role);
     }
 
     @Override
@@ -38,11 +42,13 @@ public class RoleServiceManager implements RoleService {
 
     @Override
     public List<RoleDTO> getRoles() {
-        return mapper.toDtoList(repository.findAll());
+        return mapper
+                .toDtoList(repository.findAll());
     }
 
     private Boolean doesExistBy(RoleType roleType) {
-        return repository.existsByRoleType(roleType);
+        return repository
+                .existsByRoleType(roleType);
     }
 
 }
