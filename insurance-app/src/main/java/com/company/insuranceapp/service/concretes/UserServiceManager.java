@@ -31,25 +31,19 @@ public class UserServiceManager implements UserService {
 
     @Override
     public UserDTO register(RegisterRequest request) {
-        String password = passwordEncoder
-                .encode(request.getPassword());
-        Role role = roleService
-                .findByRoleType(request.getRoleType());
-        User user = mapper
-                .toEntity(request, password, Set.of(role));
-        return mapper
-                .toDto(userRepository.saveAndFlush(user));
+        String password = passwordEncoder.encode(request.getPassword());
+        Role role = roleService.findByRoleType(request.getRoleType());
+        User user = mapper.toEntity(request, password, Set.of(role));
+        return mapper.toDto(userRepository.saveAndFlush(user));
     }
 
     @Override
     public UserDTO getByUserId(Long id) {
-        return mapper
-                .toDto(findByUserId(id));
+        return mapper.toDto(findByUserId(id));
     }
 
     @Override
     public User findByUserId(Long id) {
-        return userRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
+        return userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
     }
 }

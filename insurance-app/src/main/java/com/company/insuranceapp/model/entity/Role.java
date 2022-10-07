@@ -7,8 +7,8 @@ import org.hibernate.Hibernate;
 import javax.persistence.*;
 
 import java.util.Objects;
+import java.util.Set;
 
-import static com.company.insuranceapp.model.entity.User.TABLE_NAME;
 import static javax.persistence.EnumType.STRING;
 
 @Entity
@@ -17,9 +17,8 @@ import static javax.persistence.EnumType.STRING;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = TABLE_NAME)
+@Table(name = "roles")
 public class Role {
-    public static final String TABLE_NAME = "role";
     @Id
     @Column(
             name = "id",
@@ -37,8 +36,11 @@ public class Role {
     private Long id;
 
     @Enumerated(STRING)
-    @Column(name = "role_type",unique = true, nullable = false)
+    @Column(name = "role_type", unique = true, nullable = false)
     private RoleType roleType;
+
+    @ManyToMany(mappedBy = "roles")
+    Set<User> users;
 
     @Override
     public boolean equals(Object o) {

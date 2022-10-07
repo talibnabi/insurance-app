@@ -26,5 +26,4 @@ public class UserDTO {
     private Boolean accountNonExpired;
     private Boolean credentialsNonExpired;
     private LocalDateTime createdDate;
-    private Set<RoleDTO> roles;
-}
+    private Set<RoleDTO> roles;}

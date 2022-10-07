@@ -24,31 +24,23 @@ public class RoleServiceManager implements RoleService {
 
     @Override
     public RoleDTO createRole(RoleRequest request) {
-        if (
-                doesExistBy(request
-                        .getRoleType()))
-            throw new ResourceExistsException("Role", "roleType", request.getRoleType());
-        Role role = repository
-                .save(mapper.toEntity(request));
-        return mapper
-                .toDto(role);
+        if (doesExistBy(request.getRoleType())) throw new ResourceExistsException("Role", "roleType", request.getRoleType());
+        Role role = repository.save(mapper.toEntity(request));
+        return mapper.toDto(role);
     }
 
     @Override
     public Role findByRoleType(RoleType roleType) {
-        return repository.findByRoleType(roleType)
-                .orElseThrow(() -> new ResourceNotFoundException("Role", "roleType", roleType));
+        return repository.findByRoleType(roleType).orElseThrow(() -> new ResourceNotFoundException("Role", "roleType", roleType));
     }
 
     @Override
     public List<RoleDTO> getRoles() {
-        return mapper
-                .toDtoList(repository.findAll());
+        return mapper.toDtoList(repository.findAll());
     }
 
     private Boolean doesExistBy(RoleType roleType) {
-        return repository
-                .existsByRoleType(roleType);
+        return repository.existsByRoleType(roleType);
     }
 
 }

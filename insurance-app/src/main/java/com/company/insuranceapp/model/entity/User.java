@@ -11,9 +11,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Set;
 
-import static com.company.insuranceapp.model.entity.User.TABLE_NAME;
-import static javax.persistence.CascadeType.MERGE;
-import static javax.persistence.CascadeType.PERSIST;
+import static javax.persistence.CascadeType.*;
 import static javax.persistence.FetchType.EAGER;
 
 @Entity
@@ -22,9 +20,8 @@ import static javax.persistence.FetchType.EAGER;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = TABLE_NAME)
+@Table(name = "users")
 public class User {
-    public static final String TABLE_NAME = "user";
     @Id
     @Column(name = "id",
             insertable = false
@@ -71,10 +68,10 @@ public class User {
     @Column(name = "created_date", updatable = false, nullable = false)
     private LocalDateTime createdDate;
 
-    @ManyToMany(fetch = EAGER, cascade = {PERSIST, MERGE})
+    @ManyToMany
     @JoinTable(name = "users_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private Set<Role> roles;
 
     @Override
