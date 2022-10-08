@@ -1,10 +1,9 @@
 package com.company.insuranceapp.mapper;
 
-import com.company.insuranceapp.model.request.UserUpdateRequest;
-import com.company.insuranceapp.model.response.UserResponse;
 import com.company.insuranceapp.model.entity.Role;
 import com.company.insuranceapp.model.entity.User;
 import com.company.insuranceapp.model.request.RegisterRequest;
+import com.company.insuranceapp.model.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

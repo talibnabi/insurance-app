@@ -18,4 +18,6 @@ public class UserResponse {
     private String username;
     private String email;
     private Long point;
-    private Set<RoleResponse> roles;}
+    private Set<RoleResponse> roles;
+    private Set<Course> courses;
+}

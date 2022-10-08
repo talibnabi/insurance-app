@@ -55,6 +55,12 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
     private Set<Role> roles;
 
+    @ManyToMany
+    @JoinTable(name = "users_courses",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id", referencedColumnName = "course_id"))
+    private Set<Course> courses;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

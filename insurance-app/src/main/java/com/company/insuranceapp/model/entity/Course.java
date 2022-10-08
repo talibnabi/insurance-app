@@ -3,6 +3,7 @@ package com.company.insuranceapp.model.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -38,4 +39,8 @@ public class Course {
     @JoinColumn(referencedColumnName = "storage_id", name = "video_id")
     @OneToOne
     private Storage video;
+   
+
+    @ManyToMany(mappedBy = "courses")
+    Set<User> users;
 }

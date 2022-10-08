@@ -4,29 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="372f707d-99d3-4bc3-87ad-a3aaf2046206" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/pasha.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+    <list default="true" id="372f707d-99d3-4bc3-87ad-a3aaf2046206" name="Changes" comment="security done">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f68733a-84a6-4a38-a2a1-48248d82956d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f68733a-84a6-4a38-a2a1-48248d82956d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f68733a-84a6-4a38-a2a1-48248d82956d/storage_v2/_src_/database/insuranceApp.57Q_sQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f68733a-84a6-4a38-a2a1-48248d82956d/storage_v2/_src_/database/insuranceApp.57Q_sQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserQuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserQuestionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Storage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/UserQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/UserQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserQuestionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserQuestionRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserUpdateRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/UserQuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/UserQuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserQuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserQuestionServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserQuestionServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/CourseRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,8 +116,30 @@
       <updated>1665143036926</updated>
       <workItem from="1665143038409" duration="1745000" />
       <workItem from="1665145576748" duration="28632000" />
-      <workItem from="1665194616543" duration="9224000" />
+      <workItem from="1665194616543" duration="20784000" />
     </task>
+    <task id="LOCAL-00001" summary="security done">
+      <created>1665217681679</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665217681679</updated>
+    </task>
+    <task id="LOCAL-00002" summary="security done">
+      <created>1665217712871</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665217712871</updated>
+    </task>
+    <task id="LOCAL-00003" summary="security done">
+      <created>1665233582798</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665233582798</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

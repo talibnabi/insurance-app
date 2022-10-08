@@ -831,7 +831,7 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>2247</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2252</IntrospectionStateNumber>
       <ObjectId>100321</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4285,7 +4285,7 @@ false Zulu
     <schema id="275" parent="8" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>2247</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2252</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4374,33 +4374,39 @@ false Zulu
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="290" parent="275" name="users_roles">
+    <table id="290" parent="275" name="users_courses">
+      <ObjectId>100646</ObjectId>
+      <StateNumber>2249</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="291" parent="275" name="users_roles">
       <ObjectId>100551</ObjectId>
       <StateNumber>2217</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="291" parent="283" name="answer_id">
+    <column id="292" parent="283" name="answer_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2224</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="292" parent="283" name="answer">
+    <column id="293" parent="283" name="answer">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2224</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="293" parent="283" name="id_question">
+    <column id="294" parent="283" name="id_question">
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
       <StateNumber>2224</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="294" parent="283" name="fka7obhh0b56p70kf3x0jsfdhog">
+    <foreign-key id="295" parent="283" name="fka7obhh0b56p70kf3x0jsfdhog">
       <ColNames>id_question</ColNames>
       <ObjectId>100584</ObjectId>
       <RefColNames>question_id</RefColNames>
@@ -4410,7 +4416,7 @@ false Zulu
       <RefTableName>questions</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="295" parent="283" name="answers_pkey">
+    <index id="296" parent="283" name="answers_pkey">
       <ColNames>answer_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100575</ObjectId>
@@ -4419,39 +4425,39 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="296" parent="283" name="answers_pkey">
+    <key id="297" parent="283" name="answers_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100576</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2224</StateNumber>
       <UnderlyingIndexId>100575</UnderlyingIndexId>
     </key>
-    <column id="297" parent="284" name="course_id">
+    <column id="298" parent="284" name="course_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2241</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="298" parent="284" name="description">
+    <column id="299" parent="284" name="description">
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
       <StateNumber>2241</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="299" parent="284" name="name">
+    <column id="300" parent="284" name="name">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
       <StateNumber>2241</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="300" parent="284" name="storage_id">
+    <column id="301" parent="284" name="storage_id">
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
       <StateNumber>2241</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="301" parent="284" name="fk3v359ueo5xu7sdxse2xfkr2ff">
+    <foreign-key id="302" parent="284" name="fk3v359ueo5xu7sdxse2xfkr2ff">
       <ColNames>storage_id</ColNames>
       <ObjectId>100641</ObjectId>
       <RefColNames>storage_id</RefColNames>
@@ -4461,7 +4467,7 @@ false Zulu
       <RefTableName>storages</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="302" parent="284" name="courses_pkey">
+    <index id="303" parent="284" name="courses_pkey">
       <ColNames>course_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100630</ObjectId>
@@ -4470,34 +4476,34 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="303" parent="284" name="courses_pkey">
+    <key id="304" parent="284" name="courses_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100631</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2241</StateNumber>
       <UnderlyingIndexId>100630</UnderlyingIndexId>
     </key>
-    <column id="304" parent="285" name="question_id">
+    <column id="305" parent="285" name="question_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2225</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="305" parent="285" name="question">
+    <column id="306" parent="285" name="question">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2225</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="306" parent="285" name="id_answer">
+    <column id="307" parent="285" name="id_answer">
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
       <StateNumber>2225</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="307" parent="285" name="fk1a89h6s4uwlkiiocbog4wg8ht">
+    <foreign-key id="308" parent="285" name="fk1a89h6s4uwlkiiocbog4wg8ht">
       <ColNames>id_answer</ColNames>
       <ObjectId>100589</ObjectId>
       <RefColNames>answer_id</RefColNames>
@@ -4507,7 +4513,7 @@ false Zulu
       <RefTableName>answers</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="308" parent="285" name="questions_pkey">
+    <index id="309" parent="285" name="questions_pkey">
       <ColNames>question_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100580</ObjectId>
@@ -4516,28 +4522,28 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="309" parent="285" name="questions_pkey">
+    <key id="310" parent="285" name="questions_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100581</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2225</StateNumber>
       <UnderlyingIndexId>100580</UnderlyingIndexId>
     </key>
-    <column id="310" parent="286" name="id">
+    <column id="311" parent="286" name="id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2208</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="311" parent="286" name="role_type">
+    <column id="312" parent="286" name="role_type">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2208</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="312" parent="286" name="roles_pkey">
+    <index id="313" parent="286" name="roles_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100542</ObjectId>
@@ -4546,7 +4552,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="313" parent="286" name="uk_6kpjgt1lwdofsckw70uo9eo0">
+    <index id="314" parent="286" name="uk_6kpjgt1lwdofsckw70uo9eo0">
       <ColNames>role_type</ColNames>
       <ObjectId>100556</ObjectId>
       <StateNumber>2212</StateNumber>
@@ -4556,51 +4562,51 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="314" parent="286" name="roles_pkey">
+    <key id="315" parent="286" name="roles_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100543</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2208</StateNumber>
       <UnderlyingIndexId>100542</UnderlyingIndexId>
     </key>
-    <key id="315" parent="286" name="uk_6kpjgt1lwdofsckw70uo9eo0">
+    <key id="316" parent="286" name="uk_6kpjgt1lwdofsckw70uo9eo0">
       <ObjectId>100557</ObjectId>
       <StateNumber>2212</StateNumber>
       <UnderlyingIndexId>100556</UnderlyingIndexId>
     </key>
-    <column id="316" parent="287" name="storage_id">
+    <column id="317" parent="287" name="storage_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2242</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="317" parent="287" name="download_url">
+    <column id="318" parent="287" name="download_url">
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
       <StateNumber>2242</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="318" parent="287" name="name">
+    <column id="319" parent="287" name="name">
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
       <StateNumber>2242</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="319" parent="287" name="size">
+    <column id="320" parent="287" name="size">
       <DataType>double precision|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2242</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="320" parent="287" name="type">
+    <column id="321" parent="287" name="type">
       <DataType>varchar(255)|0s</DataType>
       <Position>5</Position>
       <StateNumber>2242</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="321" parent="287" name="storages_pkey">
+    <index id="322" parent="287" name="storages_pkey">
       <ColNames>storage_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100637</ObjectId>
@@ -4609,39 +4615,39 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="322" parent="287" name="storages_pkey">
+    <key id="323" parent="287" name="storages_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100638</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2242</StateNumber>
       <UnderlyingIndexId>100637</UnderlyingIndexId>
     </key>
-    <column id="323" parent="288" name="user_question_id">
+    <column id="324" parent="288" name="user_question_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2235</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="324" parent="288" name="point">
+    <column id="325" parent="288" name="point">
       <DataType>boolean|0s</DataType>
       <Position>2</Position>
       <StateNumber>2235</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="325" parent="288" name="id_question">
+    <column id="326" parent="288" name="id_question">
       <DataType>bigint|0s</DataType>
       <Position>3</Position>
       <StateNumber>2235</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="326" parent="288" name="id_user">
+    <column id="327" parent="288" name="id_user">
       <DataType>bigint|0s</DataType>
       <Position>4</Position>
       <StateNumber>2235</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="327" parent="288" name="fko3qfy0pncxvhusrcufu2gu8ak">
+    <foreign-key id="328" parent="288" name="fko3qfy0pncxvhusrcufu2gu8ak">
       <ColNames>id_question</ColNames>
       <ObjectId>100615</ObjectId>
       <RefColNames>question_id</RefColNames>
@@ -4651,7 +4657,7 @@ false Zulu
       <RefTableName>questions</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="328" parent="288" name="fkaxbj7rwhm8u3s9iwoymup5si1">
+    <foreign-key id="329" parent="288" name="fkaxbj7rwhm8u3s9iwoymup5si1">
       <ColNames>id_user</ColNames>
       <ObjectId>100620</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4661,7 +4667,7 @@ false Zulu
       <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="329" parent="288" name="user_questions_pkey">
+    <index id="330" parent="288" name="user_questions_pkey">
       <ColNames>user_question_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100612</ObjectId>
@@ -4670,91 +4676,91 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="330" parent="288" name="user_questions_pkey">
+    <key id="331" parent="288" name="user_questions_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100613</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2235</StateNumber>
       <UnderlyingIndexId>100612</UnderlyingIndexId>
     </key>
-    <column id="331" parent="289" name="id">
+    <column id="332" parent="289" name="id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="332" parent="289" name="account_non_expired">
+    <column id="333" parent="289" name="account_non_expired">
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="333" parent="289" name="account_non_locked">
+    <column id="334" parent="289" name="account_non_locked">
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="334" parent="289" name="created_date">
+    <column id="335" parent="289" name="created_date">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="335" parent="289" name="credentials_non_expired">
+    <column id="336" parent="289" name="credentials_non_expired">
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="336" parent="289" name="email">
+    <column id="337" parent="289" name="email">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="337" parent="289" name="enabled">
+    <column id="338" parent="289" name="enabled">
       <DataType>boolean|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="338" parent="289" name="first_name">
+    <column id="339" parent="289" name="first_name">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="339" parent="289" name="last_name">
+    <column id="340" parent="289" name="last_name">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="340" parent="289" name="password">
+    <column id="341" parent="289" name="password">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="341" parent="289" name="username">
+    <column id="342" parent="289" name="username">
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StateNumber>2209</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="342" parent="289" name="users_pkey">
+    <index id="343" parent="289" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100549</ObjectId>
@@ -4763,7 +4769,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="343" parent="289" name="uk_6dotkott2kjsp8vw4d0m25fb7">
+    <index id="344" parent="289" name="uk_6dotkott2kjsp8vw4d0m25fb7">
       <ColNames>email</ColNames>
       <ObjectId>100558</ObjectId>
       <StateNumber>2214</StateNumber>
@@ -4773,7 +4779,7 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <index id="344" parent="289" name="uk_r43af9ap4edm43mmtq01oddj6">
+    <index id="345" parent="289" name="uk_r43af9ap4edm43mmtq01oddj6">
       <ColNames>username</ColNames>
       <ObjectId>100560</ObjectId>
       <StateNumber>2216</StateNumber>
@@ -4783,38 +4789,89 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="345" parent="289" name="users_pkey">
+    <key id="346" parent="289" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100550</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2209</StateNumber>
       <UnderlyingIndexId>100549</UnderlyingIndexId>
     </key>
-    <key id="346" parent="289" name="uk_6dotkott2kjsp8vw4d0m25fb7">
+    <key id="347" parent="289" name="uk_6dotkott2kjsp8vw4d0m25fb7">
       <ObjectId>100559</ObjectId>
       <StateNumber>2214</StateNumber>
       <UnderlyingIndexId>100558</UnderlyingIndexId>
     </key>
-    <key id="347" parent="289" name="uk_r43af9ap4edm43mmtq01oddj6">
+    <key id="348" parent="289" name="uk_r43af9ap4edm43mmtq01oddj6">
       <ObjectId>100561</ObjectId>
       <StateNumber>2216</StateNumber>
       <UnderlyingIndexId>100560</UnderlyingIndexId>
     </key>
-    <column id="348" parent="290" name="user_id">
+    <column id="349" parent="290" name="user_id">
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>2248</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="350" parent="290" name="course_id">
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>2248</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <foreign-key id="351" parent="290" name="fkf9urfrtqmay7r1ee9s5v2ngk5">
+      <ColNames>user_id</ColNames>
+      <ObjectId>100656</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>2250</StateNumber>
+      <RefTableId>100544</RefTableId>
+      <RefTableName>users</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <foreign-key id="352" parent="290" name="fkhnobs8cb619w5klgkfp61f7nx">
+      <ColNames>course_id</ColNames>
+      <ObjectId>100651</ObjectId>
+      <RefColNames>course_id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>2249</StateNumber>
+      <RefTableId>100625</RefTableId>
+      <RefTableName>courses</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="353" parent="290" name="users_courses_pkey">
+      <ColNames>user_id
+course_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>100649</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2248</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="354" parent="290" name="users_courses_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>100650</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2248</StateNumber>
+      <UnderlyingIndexId>100649</UnderlyingIndexId>
+    </key>
+    <column id="355" parent="291" name="user_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>2210</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="349" parent="290" name="role_id">
+    <column id="356" parent="291" name="role_id">
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2210</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <foreign-key id="350" parent="290" name="fk2o0jvgh89lemvvo17cbqvdxaa">
+    <foreign-key id="357" parent="291" name="fk2o0jvgh89lemvvo17cbqvdxaa">
       <ColNames>user_id</ColNames>
       <ObjectId>100567</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4824,7 +4881,7 @@ false Zulu
       <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="351" parent="290" name="fkj6m8fwv7oqv74fcehir1a9ffy">
+    <foreign-key id="358" parent="291" name="fkj6m8fwv7oqv74fcehir1a9ffy">
       <ColNames>role_id</ColNames>
       <ObjectId>100562</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4834,7 +4891,7 @@ false Zulu
       <RefTableName>roles</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="352" parent="290" name="users_roles_pkey">
+    <index id="359" parent="291" name="users_roles_pkey">
       <ColNames>user_id
 role_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
@@ -4844,7 +4901,7 @@ role_id</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="353" parent="290" name="users_roles_pkey">
+    <key id="360" parent="291" name="users_roles_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>100555</ObjectId>
       <Primary>1</Primary>
