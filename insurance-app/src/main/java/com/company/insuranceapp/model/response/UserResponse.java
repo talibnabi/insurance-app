@@ -1,6 +1,7 @@
 package com.company.insuranceapp.model.response;
 
 
+import com.company.insuranceapp.model.entity.Course;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,4 +27,6 @@ public class UserResponse {
     private Boolean accountNonExpired;
     private Boolean credentialsNonExpired;
     private LocalDateTime createdDate;
-    private Set<RoleResponse> roles;}
+    private Set<RoleResponse> roles;
+    private Set<Course> courses;
+}

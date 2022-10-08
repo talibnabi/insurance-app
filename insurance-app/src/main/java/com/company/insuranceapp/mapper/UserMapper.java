@@ -1,9 +1,9 @@
 package com.company.insuranceapp.mapper;
 
-import com.company.insuranceapp.model.response.UserResponse;
 import com.company.insuranceapp.model.entity.Role;
 import com.company.insuranceapp.model.entity.User;
 import com.company.insuranceapp.model.request.RegisterRequest;
+import com.company.insuranceapp.model.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -45,7 +45,8 @@ public class UserMapper {
                 entity.getAccountNonExpired(),
                 entity.getCredentialsNonExpired(),
                 entity.getCreatedDate(),
-                roleMapper.toDtoSet(entity.getRoles())
+                roleMapper.toDtoSet(entity.getRoles()),
+                entity.getCourses()
         );
     }
 }
