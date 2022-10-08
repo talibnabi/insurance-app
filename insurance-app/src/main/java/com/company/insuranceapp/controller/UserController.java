@@ -6,7 +6,6 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.interfaces.JWTVerifier;
 import com.company.insuranceapp.mapper.UserMapper;
 import com.company.insuranceapp.model.entity.User;
-import com.company.insuranceapp.model.request.LoginRequest;
 import com.company.insuranceapp.model.request.RegisterRequest;
 import com.company.insuranceapp.model.request.UserUpdateRequest;
 import com.company.insuranceapp.model.response.ResponseModel;
@@ -17,8 +16,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -41,7 +38,6 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 public class UserController {
     private final UserService userService;
     private final UserMapper userMapper;
-    private final AuthenticationManager authenticationManager;
 
     @GetMapping("/refresh-token")
     public void refreshToken (HttpServletRequest request, HttpServletResponse response) throws IOException
@@ -105,14 +101,5 @@ public class UserController {
         userMapper.toUser(userUpdateRequest, user);
         user = userService.update(user);
         return ResponseEntity.ok(ResponseModel.success(userMapper.toDto(user)));
-    }
-
-    @PostMapping
-    public void login (@RequestBody LoginRequest loginRequest)
-    {
-        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(loginRequest.getUsername(),
-                loginRequest.getPassword());
-        authenticationManager.authenticate(token);
-
     }
 }
