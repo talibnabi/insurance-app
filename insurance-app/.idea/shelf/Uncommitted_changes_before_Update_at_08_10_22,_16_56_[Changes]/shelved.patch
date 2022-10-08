@@ -1,0 +1,212 @@
+Index: .idea/dataSources.xml
+===================================================================
+diff --git a/.idea/dataSources.xml b/.idea/dataSources.xml
+deleted file mode 100644
+--- a/.idea/dataSources.xml	(revision 929fb289c0975ca932668071023ab99c95b09c82)
++++ /dev/null	(revision 929fb289c0975ca932668071023ab99c95b09c82)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+-    <data-source source="LOCAL" name="insuranceApp@localhost" uuid="5f68733a-84a6-4a38-a2a1-48248d82956d">
+-      <driver-ref>postgresql</driver-ref>
+-      <synchronize>true</synchronize>
+-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+-      <jdbc-url>jdbc:postgresql://localhost:5432/insuranceApp</jdbc-url>
+-      <working-dir>$ProjectFileDir$</working-dir>
+-    </data-source>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/dataSources.local.xml
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+deleted file mode 100644
+--- a/.idea/dataSources.local.xml	(revision 929fb289c0975ca932668071023ab99c95b09c82)
++++ /dev/null	(revision 929fb289c0975ca932668071023ab99c95b09c82)
+@@ -1,20 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="dataSourceStorageLocal" created-in="IU-221.5921.22">
+-    <data-source name="insuranceApp@localhost" uuid="5f68733a-84a6-4a38-a2a1-48248d82956d">
+-      <database-info product="PostgreSQL" version="14.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.4.0" dbms="POSTGRES" exact-version="14.4" exact-driver-version="42.4">
+-        <identifier-quote-string>&quot;</identifier-quote-string>
+-      </database-info>
+-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+-      <secret-storage>master_key</secret-storage>
+-      <user-name>postgres</user-name>
+-      <schema-mapping>
+-        <introspection-scope>
+-          <node kind="database" qname="@">
+-            <node kind="schema" qname="@" />
+-          </node>
+-        </introspection-scope>
+-      </schema-mapping>
+-    </data-source>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect\nspring.jpa.hibernate.ddl-auto=update\nspring.jpa.hibernate.show-sql=true\nspring.datasource.url=jdbc:postgresql://localhost:5432/insuranceApp\nspring.datasource.username=postgres\nspring.datasource.password=12345\nspring.jpa.properties.javax.persistence.validation.mode = none\nserver.port=8099
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	(revision 929fb289c0975ca932668071023ab99c95b09c82)
++++ b/src/main/resources/application.properties	(date 1665233661435)
+@@ -1,7 +1,7 @@
+ spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+ spring.jpa.hibernate.ddl-auto=update
+ spring.jpa.hibernate.show-sql=true
+-spring.datasource.url=jdbc:postgresql://localhost:5432/insuranceApp
++spring.datasource.url=jdbc:postgresql://172.16.68.220:5432/insuranceApp
+ spring.datasource.username=postgres
+ spring.datasource.password=12345
+ spring.jpa.properties.javax.persistence.validation.mode = none
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"372f707d-99d3-4bc3-87ad-a3aaf2046206\" name=\"Changes\" comment=\"security done\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/AnswerController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/AnswerController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/QuestionController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/QuestionController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/RoleController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/RoleController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/target/classes/application.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/target/classes/application.properties\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CodeInsightWorkspaceSettings\">\n    <option name=\"optimizeImportsOnTheFly\" value=\"true\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Enum\" />\n        <option value=\"Interface\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\n  </component>\n  <component name=\"JpbToolWindowState\">\n    <option name=\"myId2FirstActivated\">\n      <map>\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\" />\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\n      </map>\n    </option>\n    <option name=\"myId2Visible\">\n      <map>\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"false\" />\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"false\" />\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"false\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"mavenHome\" value=\"Use Maven wrapper\" />\n        <option name=\"useMavenConfig\" value=\"true\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProjectId\" id=\"2Fo0GgH9e5lYCGtGctkCRivBk6B\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RequestMappingsPanelOrder0\": \"0\",\n    \"RequestMappingsPanelOrder1\": \"1\",\n    \"RequestMappingsPanelWidth0\": \"75\",\n    \"RequestMappingsPanelWidth1\": \"75\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"last_opened_file_path\": \"C:/Spring-Learning-Apps/book-store-app\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"project.structure.last.edited\": \"Project\",\n    \"project.structure.proportion\": \"0.0\",\n    \"project.structure.side.proportion\": \"0.0\",\n    \"settings.editor.selected.configurable\": \"editor.preferences.import\",\n    \"spring.configuration.checksum\": \"b90f817591b63106aa4326798ec66e0d\"\n  },\n  \"keyToStringList\": {\n    \"DatabaseDriversLRU\": [\n      \"postgresql\"\n    ]\n  }\n}]]></component>\n  <component name=\"RunManager\">\n    <configuration name=\"InsuranceAppApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\n      <module name=\"insurance-app\" />\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.company.insuranceapp.InsuranceAppApplication\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"372f707d-99d3-4bc3-87ad-a3aaf2046206\" name=\"Changes\" comment=\"\" />\n      <created>1665143036926</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1665143036926</updated>\n      <workItem from=\"1665143038409\" duration=\"1745000\" />\n      <workItem from=\"1665145576748\" duration=\"28632000\" />\n      <workItem from=\"1665194616543\" duration=\"16533000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"security done\">\n      <created>1665217681679</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1665217681679</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"security done\">\n      <created>1665217712871</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1665217712871</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"3\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"security done\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"security done\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 929fb289c0975ca932668071023ab99c95b09c82)
++++ b/.idea/workspace.xml	(date 1665233661908)
+@@ -4,13 +4,33 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="372f707d-99d3-4bc3-87ad-a3aaf2046206" name="Changes" comment="security done">
++    <list default="true" id="372f707d-99d3-4bc3-87ad-a3aaf2046206" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_10_22__02_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_10_22__02_05__Changes_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/AnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/AnswerController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/QuestionController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/RoleController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/filter/CustomAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/filter/CustomAuthenticationFilter.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/QuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/QuestionMapper.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/RoleMapper.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/dto/RoleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/RoleResponse.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/UserResponse.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Answer.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Question.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/ResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/ResponseModel.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/QuestionRepositoryCustomImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/QuestionRepositoryCustomImpl.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/RoleService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/RoleServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/RoleServiceManager.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserDetailsServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserDetailsServiceManager.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserServiceManager.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/util/Main.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -113,23 +133,8 @@
+       <updated>1665143036926</updated>
+       <workItem from="1665143038409" duration="1745000" />
+       <workItem from="1665145576748" duration="28632000" />
+-      <workItem from="1665194616543" duration="16533000" />
+-    </task>
+-    <task id="LOCAL-00001" summary="security done">
+-      <created>1665217681679</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1665217681679</updated>
++      <workItem from="1665194616543" duration="9224000" />
+     </task>
+-    <task id="LOCAL-00002" summary="security done">
+-      <created>1665217712871</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1665217712871</updated>
+-    </task>
+-    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -146,8 +151,4 @@
+       </map>
+     </option>
+   </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="security done" />
+-    <option name="LAST_COMMIT_MESSAGE" value="security done" />
+-  </component>
+ </project>
+\ No newline at end of file
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n\t<modelVersion>4.0.0</modelVersion>\n\t<parent>\n\t\t<groupId>org.springframework.boot</groupId>\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\n\t\t<version>2.7.4</version>\n\t\t<relativePath/> <!-- lookup parent from repository -->\n\t</parent>\n\t<groupId>com.company</groupId>\n\t<artifactId>insurance-app</artifactId>\n\t<version>0.0.1-SNAPSHOT</version>\n\t<name>insurance-app</name>\n\t<description>Insurance App</description>\n\t<properties>\n\t\t<java.version>11</java.version>\n\t</properties>\n\t<dependencies>\n\t\t<dependency>\n\t\t\t<groupId>org.passay</groupId>\n\t\t\t<artifactId>passay</artifactId>\n\t\t\t<version>1.6.2</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-configuration-processor</artifactId>\n\t\t\t<version>2.7.4</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-validation</artifactId>\n\t\t\t<version>2.7.4</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-data-jpa</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-web</artifactId>\n\t\t</dependency>\n\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-devtools</artifactId>\n\t\t\t<scope>runtime</scope>\n\t\t\t<optional>true</optional>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.postgresql</groupId>\n\t\t\t<artifactId>postgresql</artifactId>\n\t\t\t<scope>runtime</scope>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.projectlombok</groupId>\n\t\t\t<artifactId>lombok</artifactId>\n\t\t\t<optional>true</optional>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\n\t\t\t<scope>test</scope>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-validation</artifactId>\n\t\t\t<version>2.7.4</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-actuator</artifactId>\n\t\t\t<version>2.7.4</version>\n\t\t</dependency>\n\t\t<!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->\n\t\t<dependency>\n\t\t\t<groupId>com.auth0</groupId>\n\t\t\t<artifactId>java-jwt</artifactId>\n\t\t\t<version>4.0.0</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-security</artifactId>\n\t\t\t<version>2.7.4</version>\n\t\t</dependency>\n\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-security</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\n\t\t\t<version>2.7.2</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.security</groupId>\n\t\t\t<artifactId>spring-security-test</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>mysql</groupId>\n\t\t\t<artifactId>mysql-connector-java</artifactId>\n\t\t\t<version>8.0.30</version>\n\t\t</dependency>\n\t</dependencies>\n\n\t<build>\n\t\t<plugins>\n\t\t\t<plugin>\n\t\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\n\t\t\t\t<configuration>\n\t\t\t\t\t<excludes>\n\t\t\t\t\t\t<exclude>\n\t\t\t\t\t\t\t<groupId>org.projectlombok</groupId>\n\t\t\t\t\t\t\t<artifactId>lombok</artifactId>\n\t\t\t\t\t\t</exclude>\n\t\t\t\t\t</excludes>\n\t\t\t\t</configuration>\n\t\t\t</plugin>\n\t\t</plugins>\n\t</build>\n\n</project>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 929fb289c0975ca932668071023ab99c95b09c82)
++++ b/pom.xml	(date 1665233666764)
+@@ -14,7 +14,7 @@
+ 	<name>insurance-app</name>
+ 	<description>Insurance App</description>
+ 	<properties>
+-		<java.version>11</java.version>
++		<java.version>18</java.version>
+ 	</properties>
+ 	<dependencies>
+ 		<dependency>
+Index: target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect\nspring.jpa.hibernate.ddl-auto=update\nspring.jpa.hibernate.show-sql=true\nspring.datasource.url=jdbc:postgresql://localhost:5432/insuranceApp\nspring.datasource.username=postgres\nspring.datasource.password=12345\nspring.jpa.properties.javax.persistence.validation.mode = none\nserver.port=8099
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/target/classes/application.properties b/target/classes/application.properties
+--- a/target/classes/application.properties	(revision 929fb289c0975ca932668071023ab99c95b09c82)
++++ b/target/classes/application.properties	(date 1665233667016)
+@@ -5,4 +5,9 @@
+ spring.datasource.username=postgres
+ spring.datasource.password=12345
+ spring.jpa.properties.javax.persistence.validation.mode = none
+-server.port=8099
+\ No newline at end of file
++server.port=8099
++
++application.security.jwt.token-header=Authorization
++application.security.jwt.secret-key=boomerang
++application.security.jwt.access-token-expiration-time=86400000
++application.security.jwt.refresh-token-expiration-time=2678400000
+\ No newline at end of file
+Index: ../.idea/pasha.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../.idea/pasha.iml b/../.idea/pasha.iml
+new file mode 100644
+--- /dev/null	(date 1665233661430)
++++ b/../.idea/pasha.iml	(date 1665233661430)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file

@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="372f707d-99d3-4bc3-87ad-a3aaf2046206" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/pasha.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserQuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserQuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/UserQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/UserQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserQuestionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserQuestionRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/UserQuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/UserQuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserQuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserQuestionServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserQuestionServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserServiceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="372f707d-99d3-4bc3-87ad-a3aaf2046206" name="Changes" comment="storage done" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,6 +109,14 @@
       <workItem from="1665145576748" duration="28632000" />
       <workItem from="1665194616543" duration="9224000" />
     </task>
+    <task id="LOCAL-00001" summary="storage done">
+      <created>1665242071137</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665242071137</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,5 +132,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="storage done" />
+    <option name="LAST_COMMIT_MESSAGE" value="storage done" />
   </component>
 </project>
