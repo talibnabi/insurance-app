@@ -42,8 +42,8 @@ public class UserServiceManager implements UserService {
     }
 
     @Override
-    public UserResponse getByUsername(String username) {
-        return mapper.toDto(userRepository.findByUsername(username).orElse(null));
+    public User getByUsername(String username) {
+        return userRepository.findByUsername(username).orElse(null);
     }
 
     @Override

@@ -3,6 +3,7 @@ package com.company.insuranceapp.mapper;
 import com.company.insuranceapp.model.entity.Role;
 import com.company.insuranceapp.model.entity.User;
 import com.company.insuranceapp.model.request.RegisterRequest;
+import com.company.insuranceapp.model.request.UserUpdateRequest;
 import com.company.insuranceapp.model.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -36,12 +37,12 @@ public class UserMapper {
                 entity.getUsername(),
                 entity.getEmail(),
                 entity.getPoint(),
-                roleMapper.toDtoSet(entity.getRoles())
+                roleMapper.toDtoSet(entity.getRoles()),
+                entity.getCourses()
         );
     }
 
-    public void toUser (UserUpdateRequest userUpdateRequest, User user)
-    {
+    public void toUser(UserUpdateRequest userUpdateRequest, User user) {
         user.setFirstName(userUpdateRequest.getFirstName());
         user.setLastName(userUpdateRequest.getLastName());
         user.setPoint(userUpdateRequest.getPoint());

@@ -9,7 +9,7 @@ import java.util.List;
 public class CourseMapper {
     public static CourseResponse toCourseResponse(Course course) {
         return new CourseResponse(course.getId(), course.getName(),
-                course.getDescription(), course.getStorage());
+                course.getDescription(), course.getCover().getId(), course.getVideo().getId());
     }
     public static List<CourseResponse> toCourseResponse(List<Course> courses) {
         List<CourseResponse> courseResponses = new ArrayList<>();

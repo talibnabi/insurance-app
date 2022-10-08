@@ -1,6 +1,6 @@
 package com.company.insuranceapp.service.concretes;
 
-import com.company.insuranceapp.model.response.UserResponse;
+import com.company.insuranceapp.model.entity.User;
 import com.company.insuranceapp.service.abstracts.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -19,7 +19,7 @@ public class UserDetailsServiceManager implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserResponse user = userService.getByUsername(username);
+        User user = userService.getByUsername(username);
         if (user == null)
             throw new UsernameNotFoundException("User doesn't exist with this username.");
 

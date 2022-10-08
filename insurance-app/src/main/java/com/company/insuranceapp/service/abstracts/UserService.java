@@ -9,7 +9,7 @@ public interface UserService {
 
     UserResponse getByUserId(Long id);
 
-    UserResponse getByUsername (String username);
+    User getByUsername (String username);
 
     User findByUserId(Long id);
 

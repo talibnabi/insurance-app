@@ -21,23 +21,19 @@ import java.util.*;
 
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 
-public class CustomAuthorizationFilter extends OncePerRequestFilter
-{
+public class CustomAuthorizationFilter extends OncePerRequestFilter {
 
     @Override
-    protected void doFilterInternal (HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
-            throws ServletException, IOException
-    {
-        if (request.getServletPath().contains("login"))
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
+        if (request.getServletPath().contains("login") || request.getServletPath().contains("sign-up") ||
+                request.getServletPath().contains("refresh-token"))
             filterChain.doFilter(request, response);
-        else
-        {
+        else {
             String authorizationHeader = request.getHeader(AUTHORIZATION);
             String prefix = "Bearer ";
-            if (authorizationHeader != null && authorizationHeader.startsWith(prefix))
-            {
-                try
-                {
+            if (authorizationHeader != null && authorizationHeader.startsWith(prefix)) {
+                try {
                     String token = authorizationHeader.substring(prefix.length());
                     Algorithm algorithm = Algorithm.HMAC256("secret".getBytes());
                     JWTVerifier verifier = JWT.require(algorithm).build();
@@ -50,8 +46,7 @@ public class CustomAuthorizationFilter extends OncePerRequestFilter
                             username, null, authorities);
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
                     filterChain.doFilter(request, response);
-                } catch (Exception ex)
-                {
+                } catch (Exception ex) {
                     ex.printStackTrace();
                     response.setHeader("error", ex.getMessage());
                     response.setStatus(HttpStatus.FORBIDDEN.value());

@@ -19,7 +19,7 @@ public class UserQuestionController {
     private final UserService userService;
     private final QuestionService questionService;
 
-    @PostMapping("/pass")
+    @PostMapping("/passQuestion")
     public ResponseEntity<ResponseModel> passQuestion(@RequestBody UserQuestionRequest userQuestionRequest)
     {
         User user = userService.findByUserId(userQuestionRequest.getUserId());
