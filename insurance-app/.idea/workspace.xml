@@ -8,11 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f68733a-84a6-4a38-a2a1-48248d82956d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f68733a-84a6-4a38-a2a1-48248d82956d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5f68733a-84a6-4a38-a2a1-48248d82956d/storage_v2/_src_/database/insuranceApp.57Q_sQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5f68733a-84a6-4a38-a2a1-48248d82956d/storage_v2/_src_/database/insuranceApp.57Q_sQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserCourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserCourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserQuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserQuestionMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,7 @@
       <updated>1665143036926</updated>
       <workItem from="1665143038409" duration="1745000" />
       <workItem from="1665145576748" duration="28632000" />
-      <workItem from="1665194616543" duration="20784000" />
+      <workItem from="1665194616543" duration="23739000" />
     </task>
     <task id="LOCAL-00001" summary="security done">
       <created>1665217681679</created>

@@ -1,5 +1,4 @@
 package com.company.insuranceapp.mapper;
 
-public class UserQuestionMapper {
-
+public class UserCourseMapper {
 }
