@@ -22,10 +22,6 @@ public class UserMapper {
                 .username(request.getUserName())
                 .email(request.getEmail())
                 .password(password)
-                .enabled(true)
-                .accountNonExpired(true)
-                .accountNonLocked(true)
-                .credentialsNonExpired(true)
                 .roles(roles)
                 .build();
     }
@@ -39,14 +35,15 @@ public class UserMapper {
                 entity.getLastName(),
                 entity.getUsername(),
                 entity.getEmail(),
-                entity.getPassword(),
-                entity.getEnabled(),
-                entity.getAccountNonLocked(),
-                entity.getAccountNonExpired(),
-                entity.getCredentialsNonExpired(),
-                entity.getCreatedDate(),
-                roleMapper.toDtoSet(entity.getRoles()),
-                entity.getCourses()
+                entity.getPoint(),
+                roleMapper.toDtoSet(entity.getRoles())
         );
+    }
+
+    public void toUser (UserUpdateRequest userUpdateRequest, User user)
+    {
+        user.setFirstName(userUpdateRequest.getFirstName());
+        user.setLastName(userUpdateRequest.getLastName());
+        user.setPoint(userUpdateRequest.getPoint());
     }
 }

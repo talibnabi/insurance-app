@@ -8,5 +8,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserQuestionRepository extends JpaRepository<UserQuestion, Long> {
     UserQuestion findByUserAndQuestion (User user, Question question);
 
-    Long countByUserAndPoint (User user, Boolean point);
 }

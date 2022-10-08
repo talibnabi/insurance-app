@@ -22,9 +22,4 @@ public class UserQuestionServiceManager implements UserQuestionService {
     public Boolean isQuestionPassed(User user, Question question) {
         return userQuestionRepository.findByUserAndQuestion(user, question) != null;
     }
-
-    @Override
-    public Long getUserPoint(User user) {
-        return userQuestionRepository.countByUserAndPoint(user, true);
-    }
 }
