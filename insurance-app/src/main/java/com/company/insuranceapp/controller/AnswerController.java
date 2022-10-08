@@ -32,7 +32,7 @@ public class AnswerController {
         return ResponseEntity.ok(ResponseModel.success(answerResponse));
     }
 
-    @GetMapping("/getByQuestionId")
+    @GetMapping("/getByQuestionId/{id}")
     public ResponseEntity<ResponseModel<List<AnswerResponse>>> getByQuestionId(@PathVariable Long id) {
         Question question = questionService.getById(id);
         if (question == null)
