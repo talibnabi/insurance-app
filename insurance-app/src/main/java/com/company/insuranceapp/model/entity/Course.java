@@ -32,9 +32,14 @@ public class Course {
 
     private String description;
 
-    @JoinColumn(referencedColumnName = "storage_id", name = "storage_id")
+    @JoinColumn(referencedColumnName = "storage_id", name = "cover_id")
     @OneToOne
-    private Storage storage;
+    private Storage cover;
+
+    @JoinColumn(referencedColumnName = "storage_id", name = "video_id")
+    @OneToOne
+    private Storage video;
+   
 
     @ManyToMany(mappedBy = "courses")
     Set<User> users;

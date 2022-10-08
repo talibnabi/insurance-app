@@ -9,5 +9,4 @@ public interface UserQuestionService {
 
     Boolean isQuestionPassed(User user, Question question);
 
-    Long getUserPoint(User user);
 }

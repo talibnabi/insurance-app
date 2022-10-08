@@ -6,5 +6,4 @@ import lombok.Data;
 public class UserQuestionRequest {
     private Long userId;
     private Long questionId;
-    private Boolean point;
 }

@@ -50,4 +50,9 @@ public class UserServiceManager implements UserService {
     public User findByUserId(Long id) {
         return userRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public User update(User user) {
+        return userRepository.save(user);
+    }
 }
