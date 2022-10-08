@@ -33,19 +33,8 @@ public class UserQuestionController {
         if (userQuestionService.isQuestionPassed(user, question))
             return ResponseEntity.ok(ResponseModel.error(null, "User already passed this question"));
 
-        UserQuestion userQuestion = new UserQuestion(user, question, userQuestionRequest.getPoint());
+        UserQuestion userQuestion = new UserQuestion(user, question);
         userQuestionService.passQuestion(userQuestion);
         return ResponseEntity.ok(ResponseModel.success(null));
-    }
-
-    @GetMapping("/getUserPoint/{id}")
-    public ResponseEntity<ResponseModel<Long>> getUserPoint (@PathVariable Long id)
-    {
-        User user = userService.findByUserId(id);
-        if (user == null)
-            return ResponseEntity.ok(ResponseModel.notFound("User"));
-
-        Long point = userQuestionService.getUserPoint(user);
-        return ResponseEntity.ok(ResponseModel.success(point));
     }
 }

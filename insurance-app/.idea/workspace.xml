@@ -4,12 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="372f707d-99d3-4bc3-87ad-a3aaf2046206" name="Changes" comment="security done">
+    <list default="true" id="372f707d-99d3-4bc3-87ad-a3aaf2046206" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/pasha.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/AnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/AnswerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserQuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/controller/UserQuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/Storage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/UserQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/entity/UserQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserQuestionRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserQuestionRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/request/UserUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/model/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/UserQuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/repository/UserQuestionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserQuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserQuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/abstracts/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserQuestionServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserQuestionServiceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/insuranceapp/service/concretes/UserServiceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,39 +77,40 @@
   </component>
   <component name="ProjectId" id="2Fo0GgH9e5lYCGtGctkCRivBk6B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Spring-Learning-Apps/book-store-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.import",
-    "spring.configuration.checksum": "b90f817591b63106aa4326798ec66e0d"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Spring-Learning-Apps/book-store-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;b90f817591b63106aa4326798ec66e0d&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="InsuranceAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="insurance-app" />
@@ -113,23 +130,8 @@
       <updated>1665143036926</updated>
       <workItem from="1665143038409" duration="1745000" />
       <workItem from="1665145576748" duration="28632000" />
-      <workItem from="1665194616543" duration="16533000" />
+      <workItem from="1665194616543" duration="9224000" />
     </task>
-    <task id="LOCAL-00001" summary="security done">
-      <created>1665217681679</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1665217681679</updated>
-    </task>
-    <task id="LOCAL-00002" summary="security done">
-      <created>1665217712871</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1665217712871</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,9 +147,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="security done" />
-    <option name="LAST_COMMIT_MESSAGE" value="security done" />
   </component>
 </project>

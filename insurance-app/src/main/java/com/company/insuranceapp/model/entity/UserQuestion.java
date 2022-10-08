@@ -37,7 +37,4 @@ public class UserQuestion {
     @JoinColumn(referencedColumnName = "question_id", name = "id_question")
     @ManyToOne
     private Question question;
-
-    @NonNull
-    private Boolean point;
 }

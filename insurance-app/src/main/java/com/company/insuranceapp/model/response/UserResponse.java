@@ -1,12 +1,10 @@
 package com.company.insuranceapp.model.response;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 import java.util.Set;
 
 
@@ -19,11 +17,5 @@ public class UserResponse {
     private String lastName;
     private String username;
     private String email;
-    @JsonIgnore
-    private String password;
-    private Boolean enabled;
-    private Boolean accountNonLocked;
-    private Boolean accountNonExpired;
-    private Boolean credentialsNonExpired;
-    private LocalDateTime createdDate;
+    private Long point;
     private Set<RoleResponse> roles;}

@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@RequiredArgsConstructor
 @AllArgsConstructor
 @Builder
 @Table(name = "storages")
@@ -27,8 +28,10 @@ public class Storage {
     )
     private Long id;
 
+    @NonNull
     private String name;
-    private String downloadUrl;
+    @NonNull
     private String type;
+    @NonNull
     private double size;
 }

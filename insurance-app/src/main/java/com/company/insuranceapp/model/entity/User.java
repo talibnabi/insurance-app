@@ -3,10 +3,8 @@ package com.company.insuranceapp.model.entity;
 
 import lombok.*;
 import org.hibernate.Hibernate;
-import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Set;
 
@@ -48,21 +46,8 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "enabled", nullable = false)
-    private Boolean enabled;
-
-    @Column(name = "account_non_locked", nullable = false, columnDefinition = "boolean default true")
-    private Boolean accountNonLocked;
-
-    @Column(name = "account_non_expired", nullable = false, columnDefinition = "boolean default true")
-    private Boolean accountNonExpired;
-
-    @Column(name = "credentials_non_expired", nullable = false, columnDefinition = "boolean default true")
-    private Boolean credentialsNonExpired;
-
-    @CreationTimestamp
-    @Column(name = "created_date", updatable = false, nullable = false)
-    private LocalDateTime createdDate;
+    @Column(columnDefinition = "int default 0")
+    private Long point;
 
     @ManyToMany
     @JoinTable(name = "users_roles",
