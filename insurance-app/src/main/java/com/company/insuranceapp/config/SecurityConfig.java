@@ -1,6 +1,5 @@
 package com.company.insuranceapp.config;
 
-import com.company.insuranceapp.filter.CustomAuthenticationFilter;
 import com.company.insuranceapp.filter.CustomAuthorizationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -40,10 +39,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.cors();
         http.sessionManagement().sessionCreationPolicy(STATELESS);
-        http.authorizeHttpRequests().antMatchers("/user/sign-up", "/user/refresh-token").permitAll();
+        http.authorizeHttpRequests().antMatchers("/user/sign-up", "/use r/refresh-token", "/user/login").permitAll();
         http.authorizeHttpRequests().anyRequest().authenticated();
-        http.formLogin();
-        http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
+        http.formLogin().disable().httpBasic().disable().logout().disable();
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 

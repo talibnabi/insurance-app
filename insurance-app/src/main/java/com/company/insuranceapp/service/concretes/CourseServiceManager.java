@@ -14,7 +14,7 @@ public class CourseServiceManager implements CourseService {
 
     @Override
     public Course getById(Long id) {
-        return courseRepository.findById(id).orElseThrow();
+        return courseRepository.findById(id).orElse(null);
     }
 
     @Override

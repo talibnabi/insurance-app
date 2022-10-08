@@ -13,8 +13,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController("/userCourse")
+@RestController
 @RequiredArgsConstructor
+@RequestMapping("/userCourse")
 public class UserCourseController {
     private final UserCourseService userCourseService;
     private final UserService userService;
@@ -38,7 +39,7 @@ public class UserCourseController {
         return ResponseEntity.ok(ResponseModel.success(null));
     }
 
-    @GetMapping
+    @GetMapping("/isCoursePassed")
     public ResponseEntity<ResponseModel<Boolean>> isCoursePassed(@RequestBody UserCourseRequest userCourseRequest) {
         User user = userService.findByUserId(userCourseRequest.getUserId());
         if (user == null)

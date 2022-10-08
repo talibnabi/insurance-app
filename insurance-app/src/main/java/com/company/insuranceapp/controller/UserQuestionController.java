@@ -12,8 +12,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController("/userQuestion")
+@RestController
 @RequiredArgsConstructor
+@RequestMapping("/userQuestion")
 public class UserQuestionController {
     private final UserQuestionService userQuestionService;
     private final UserService userService;

@@ -17,8 +17,16 @@ public class QuestionRepositoryCustomImpl implements QuestionRepositoryCustom {
 
     @Override
     public Question getRandomQuestionByCourse(Course course) {
-        Query query = entityManager.createQuery("select q.id from Question q where q.course=:course");
+        Query query;
+        if (course != null) {
+            query = entityManager.createQuery("select q.id from Question q where q.course=:course");
+        } else {
+            query = entityManager.createQuery("select q.id from Question q where q.course is null ");
+        }
         List<Long> ids = query.getResultList();
+        if (ids.size() == 0) {
+            return null;
+        }
 
         Random random = new Random();
         Long randomId = ids.get(random.nextInt(ids.size()));

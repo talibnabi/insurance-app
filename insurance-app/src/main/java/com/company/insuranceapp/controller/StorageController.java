@@ -18,8 +18,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-@RestController("/storage")
+@RestController
 @RequiredArgsConstructor
+@RequestMapping("/storage")
 public class StorageController {
     private final StorageService storageService;
 
