@@ -1,4 +1,4 @@
-package com.company.insuranceapp.model.dto;
+package com.company.insuranceapp.model.response;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -13,7 +13,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDTO {
+public class UserResponse {
     private Long id;
     private String firstName;
     private String lastName;
@@ -26,4 +26,4 @@ public class UserDTO {
     private Boolean accountNonExpired;
     private Boolean credentialsNonExpired;
     private LocalDateTime createdDate;
-    private Set<RoleDTO> roles;}
+    private Set<RoleResponse> roles;}

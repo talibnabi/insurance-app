@@ -4,7 +4,6 @@ import lombok.*;
 
 import javax.persistence.*;
 
-import static com.company.insuranceapp.model.entity.User.TABLE_NAME;
 
 @Entity
 @Getter
@@ -12,13 +11,11 @@ import static com.company.insuranceapp.model.entity.User.TABLE_NAME;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = TABLE_NAME)
+@Table(name = "questions")
 public class Question {
-    public static final String TABLE_NAME = "questions";
-
     @Id
     @Column(
-            name = "id",
+            name = "question_id",
             insertable = false
     )
     @GeneratedValue(
@@ -35,7 +32,9 @@ public class Question {
     @Column(name = "question", nullable = false)
     private String question;
 
-    @JoinColumn(referencedColumnName = "id", name = "id")
+    @JoinColumn(referencedColumnName = "answer_id", name = "id_answer")
     @OneToOne
     private Answer rightAnswer;
+
+
 }

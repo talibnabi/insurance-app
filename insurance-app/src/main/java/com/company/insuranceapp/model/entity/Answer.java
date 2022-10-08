@@ -1,20 +1,20 @@
 package com.company.insuranceapp.model.entity;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
-import static com.company.insuranceapp.model.entity.Answer.TABLE_NAME;
-
 @Table
-@Entity(name = TABLE_NAME)
-@Data
+@Entity(name = "answers")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Answer {
-    public static final String TABLE_NAME = "answers";
-
     @Id
     @Column(
-            name = "id",
+            name = "answer_id",
             insertable = false
     )
     @GeneratedValue(
@@ -31,7 +31,9 @@ public class Answer {
     @Column(name = "answer", nullable = false)
     private String answer;
 
-    @JoinColumn(referencedColumnName = "id", name = "id")
+    @JoinColumn(referencedColumnName = "question_id", name = "id_question")
     @ManyToOne(cascade = CascadeType.MERGE)
     private Question question;
+
+
 }

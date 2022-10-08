@@ -21,17 +21,20 @@ public class QuestionController {
     {
         Question question = questionService.getById(id);
         if (question == null)
-            return ResponseEntity.ok(ResponseModel.notFound());
+            return ResponseEntity.ok(ResponseModel.notFound("Question"));
 
         QuestionResponse questionResponse = QuestionMapper.toQuestionResponse(question);
         return ResponseEntity.ok(ResponseModel.success(questionResponse));
     }
 
-//    @GetMapping("/getRandomQuestion")
-//    public ResponseEntity<ResponseModel<QuestionResponse>> getRandomQuestion ()
-//    {
-//        Question question = questionService.getRandomQuestion();
-//        if (question == null)
-//            return ResponseEntity.ok(ResponseModel.error())
-//    }
+    @GetMapping("/getRandomQuestion")
+    public ResponseEntity<ResponseModel<QuestionResponse>> getRandomQuestion ()
+    {
+        Question question = questionService.getRandomQuestion();
+        if (question == null)
+            return ResponseEntity.ok(ResponseModel.notFound("Question"));
+
+        QuestionResponse questionResponse = QuestionMapper.toQuestionResponse(question);
+        return ResponseEntity.ok(ResponseModel.success(questionResponse));
+    }
 }

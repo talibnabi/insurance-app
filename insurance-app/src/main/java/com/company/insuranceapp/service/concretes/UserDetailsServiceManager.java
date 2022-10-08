@@ -1,8 +1,6 @@
 package com.company.insuranceapp.service.concretes;
 
-import com.company.insuranceapp.model.dto.UserDTO;
-import com.company.insuranceapp.model.entity.Role;
-import com.company.insuranceapp.model.entity.User;
+import com.company.insuranceapp.model.response.UserResponse;
 import com.company.insuranceapp.service.abstracts.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,7 +10,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -22,7 +19,7 @@ public class UserDetailsServiceManager implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserDTO user = userService.getByUsername(username);
+        UserResponse user = userService.getByUsername(username);
         if (user == null)
             throw new UsernameNotFoundException("User doesn't exist with this username.");
 

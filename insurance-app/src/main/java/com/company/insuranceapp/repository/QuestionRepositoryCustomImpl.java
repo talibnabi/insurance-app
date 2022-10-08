@@ -1,6 +1,7 @@
 package com.company.insuranceapp.repository;
 
 import com.company.insuranceapp.model.entity.Question;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -8,6 +9,7 @@ import javax.persistence.Query;
 import java.util.List;
 import java.util.Random;
 
+@Repository
 public class QuestionRepositoryCustomImpl implements QuestionRepositoryCustom{
     @PersistenceContext
     private EntityManager entityManager;

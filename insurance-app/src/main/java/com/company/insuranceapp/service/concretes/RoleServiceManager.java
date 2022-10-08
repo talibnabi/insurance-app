@@ -3,7 +3,7 @@ package com.company.insuranceapp.service.concretes;
 import com.company.insuranceapp.exception.ResourceExistsException;
 import com.company.insuranceapp.exception.ResourceNotFoundException;
 import com.company.insuranceapp.mapper.RoleMapper;
-import com.company.insuranceapp.model.dto.RoleDTO;
+import com.company.insuranceapp.model.response.RoleResponse;
 import com.company.insuranceapp.model.entity.Role;
 import com.company.insuranceapp.model.enumeration.RoleType;
 import com.company.insuranceapp.model.request.RoleRequest;
@@ -23,7 +23,7 @@ public class RoleServiceManager implements RoleService {
     private final RoleMapper mapper;
 
     @Override
-    public RoleDTO createRole(RoleRequest request) {
+    public RoleResponse createRole(RoleRequest request) {
         if (doesExistBy(request.getRoleType())) throw new ResourceExistsException("Role", "roleType", request.getRoleType());
         Role role = repository.save(mapper.toEntity(request));
         return mapper.toDto(role);
@@ -35,7 +35,7 @@ public class RoleServiceManager implements RoleService {
     }
 
     @Override
-    public List<RoleDTO> getRoles() {
+    public List<RoleResponse> getRoles() {
         return mapper.toDtoList(repository.findAll());
     }
 

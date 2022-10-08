@@ -1,6 +1,6 @@
 package com.company.insuranceapp.mapper;
 
-import com.company.insuranceapp.model.dto.RoleDTO;
+import com.company.insuranceapp.model.response.RoleResponse;
 import com.company.insuranceapp.model.entity.Role;
 import com.company.insuranceapp.model.request.RoleRequest;
 import org.springframework.stereotype.Component;
@@ -12,17 +12,17 @@ import java.util.stream.Collectors;
 
 @Component
 public class RoleMapper {
-    public RoleDTO toDto(Role entity) {
+    public RoleResponse toDto(Role entity) {
         if (entity == null) return null;
-        return new RoleDTO(entity.getId(), entity.getRoleType());
+        return new RoleResponse(entity.getId(), entity.getRoleType());
     }
 
-    public Set<RoleDTO> toDtoSet(Set<Role> entitySet) {
+    public Set<RoleResponse> toDtoSet(Set<Role> entitySet) {
         if (entitySet == null) return Collections.emptySet();
         return entitySet.stream().map(this::toDto).collect(Collectors.toSet());
     }
 
-    public List<RoleDTO> toDtoList(List<Role> entityList) {
+    public List<RoleResponse> toDtoList(List<Role> entityList) {
         if (entityList == null) return Collections.emptyList();
         return entityList.stream().map(this::toDto).collect(Collectors.toList());
     }

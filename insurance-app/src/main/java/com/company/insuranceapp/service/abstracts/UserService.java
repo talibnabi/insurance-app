@@ -1,15 +1,15 @@
 package com.company.insuranceapp.service.abstracts;
 
-import com.company.insuranceapp.model.dto.UserDTO;
+import com.company.insuranceapp.model.response.UserResponse;
 import com.company.insuranceapp.model.entity.User;
 import com.company.insuranceapp.model.request.RegisterRequest;
 
 public interface UserService {
-    UserDTO register(RegisterRequest request);
+    UserResponse register(RegisterRequest request);
 
-    UserDTO getByUserId(Long id);
+    UserResponse getByUserId(Long id);
 
-    UserDTO getByUsername (String username);
+    UserResponse getByUsername (String username);
 
     User findByUserId(Long id);
 }

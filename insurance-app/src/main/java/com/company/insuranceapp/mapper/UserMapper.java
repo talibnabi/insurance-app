@@ -1,6 +1,6 @@
 package com.company.insuranceapp.mapper;
 
-import com.company.insuranceapp.model.dto.UserDTO;
+import com.company.insuranceapp.model.response.UserResponse;
 import com.company.insuranceapp.model.entity.Role;
 import com.company.insuranceapp.model.entity.User;
 import com.company.insuranceapp.model.request.RegisterRequest;
@@ -31,9 +31,9 @@ public class UserMapper {
     }
 
 
-    public UserDTO toDto(User entity) {
+    public UserResponse toDto(User entity) {
         if (entity == null) return null;
-        return new UserDTO(
+        return new UserResponse(
                 entity.getId(),
                 entity.getFirstName(),
                 entity.getLastName(),

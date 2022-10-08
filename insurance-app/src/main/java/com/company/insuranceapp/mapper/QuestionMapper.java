@@ -8,6 +8,5 @@ public class QuestionMapper {
     {
         return new QuestionResponse(question.getId(), question.getQuestion(),
                 question.getRightAnswer().getId());
-
     }
 }

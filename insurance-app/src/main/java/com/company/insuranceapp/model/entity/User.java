@@ -6,13 +6,9 @@ import org.hibernate.Hibernate;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
-
 import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.Set;
-
-import static javax.persistence.CascadeType.*;
-import static javax.persistence.FetchType.EAGER;
 
 @Entity
 @Getter
@@ -55,13 +51,13 @@ public class User {
     @Column(name = "enabled", nullable = false)
     private Boolean enabled;
 
-    @Column(name = "account_non_locked", nullable = false)
+    @Column(name = "account_non_locked", nullable = false, columnDefinition = "boolean default true")
     private Boolean accountNonLocked;
 
-    @Column(name = "account_non_expired", nullable = false)
+    @Column(name = "account_non_expired", nullable = false, columnDefinition = "boolean default true")
     private Boolean accountNonExpired;
 
-    @Column(name = "credentials_non_expired", nullable = false)
+    @Column(name = "credentials_non_expired", nullable = false, columnDefinition = "boolean default true")
     private Boolean credentialsNonExpired;
 
     @CreationTimestamp

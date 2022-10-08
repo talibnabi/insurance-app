@@ -39,10 +39,10 @@ public class ResponseModel<T> {
         return responseModel;
     }
 
-    public static <T> ResponseModel<T> notFound ()
+    public static <T> ResponseModel<T> notFound (String message)
     {
         ResponseModel<T> responseModel = new ResponseModel<>();
-        responseModel.setMessage("Not found");
+        responseModel.setMessage(message + " not found");
         responseModel.setError(true);
         return responseModel;
     }

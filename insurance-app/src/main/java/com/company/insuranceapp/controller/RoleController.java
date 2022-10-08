@@ -1,6 +1,6 @@
 package com.company.insuranceapp.controller;
 
-import com.company.insuranceapp.model.dto.RoleDTO;
+import com.company.insuranceapp.model.response.RoleResponse;
 import com.company.insuranceapp.model.request.RoleRequest;
 import com.company.insuranceapp.service.abstracts.RoleService;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +20,7 @@ public class RoleController {
     private final RoleService roleService;
 
     @PostMapping
-    public ResponseEntity<RoleDTO> createRole(@RequestBody @Valid RoleRequest request) {
+    public ResponseEntity<RoleResponse> createRole(@RequestBody @Valid RoleRequest request) {
         return new ResponseEntity<>(roleService.createRole(request), HttpStatus.CREATED);
     }
 }

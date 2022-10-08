@@ -1,6 +1,6 @@
 package com.company.insuranceapp.controller;
 
-import com.company.insuranceapp.model.dto.UserDTO;
+import com.company.insuranceapp.model.response.UserResponse;
 import com.company.insuranceapp.model.request.RegisterRequest;
 import com.company.insuranceapp.service.abstracts.UserService;
 import lombok.RequiredArgsConstructor;
@@ -18,17 +18,17 @@ import static org.springframework.http.HttpStatus.CREATED;
 @Validated
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("api/v1/users")
+@RequestMapping("/user")
 public class UserController {
     private final UserService userService;
 
     @GetMapping("/{userId}")
-    public ResponseEntity<UserDTO> getByUserId(@PathVariable @Min(1) Long userId) {
+    public ResponseEntity<UserResponse> getByUserId(@PathVariable @Min(1) Long userId) {
         return new ResponseEntity<>(userService.getByUserId(userId), HttpStatus.OK);
     }
 
     @PostMapping("/sign-up")
-    public ResponseEntity<UserDTO> signUp(@RequestBody @Valid RegisterRequest request) {
+    public ResponseEntity<UserResponse> signUp(@RequestBody @Valid RegisterRequest request) {
         return new ResponseEntity<>(userService.register(request), CREATED);
     }
 }
