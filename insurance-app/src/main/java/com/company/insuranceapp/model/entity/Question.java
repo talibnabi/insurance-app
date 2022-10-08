@@ -36,5 +36,7 @@ public class Question {
     @OneToOne
     private Answer rightAnswer;
 
-
+    @JoinColumn(referencedColumnName = "course_id", name = "id_course")
+    @ManyToOne
+    private Course course;
 }

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/question")
 @RequiredArgsConstructor
 public class QuestionController {
-    private final QuestionService questionService;
+    private final QuestionService   questionService;
 
     @GetMapping("/getById/{id}")
     public ResponseEntity<ResponseModel<QuestionResponse>> getById(@PathVariable Long id) {
@@ -26,13 +26,13 @@ public class QuestionController {
         return ResponseEntity.ok(ResponseModel.success(questionResponse));
     }
 
-    @GetMapping("/getRandomQuestion")
-    public ResponseEntity<ResponseModel<QuestionResponse>> getRandomQuestion() {
-        Question question = questionService.getRandomQuestion();
-        if (question == null)
-            return ResponseEntity.ok(ResponseModel.notFound("Question"));
-
-        QuestionResponse questionResponse = QuestionMapper.toQuestionResponse(question);
-        return ResponseEntity.ok(ResponseModel.success(questionResponse));
-    }
+//    @GetMapping("/getRandomQuestion")
+//    public ResponseEntity<ResponseModel<QuestionResponse>> getRandomQuestion() {
+//        Question question = questionService.getRandomQuestionByCourse();
+//        if (question == null)
+//            return ResponseEntity.ok(ResponseModel.notFound("Question"));
+//
+//        QuestionResponse questionResponse = QuestionMapper.toQuestionResponse(question);
+//        return ResponseEntity.ok(ResponseModel.success(questionResponse));
+//    }
 }

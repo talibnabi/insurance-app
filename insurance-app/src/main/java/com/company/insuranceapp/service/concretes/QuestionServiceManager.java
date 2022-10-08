@@ -1,5 +1,6 @@
 package com.company.insuranceapp.service.concretes;
 
+import com.company.insuranceapp.model.entity.Course;
 import com.company.insuranceapp.model.entity.Question;
 import com.company.insuranceapp.repository.QuestionRepository;
 import com.company.insuranceapp.service.abstracts.QuestionService;
@@ -18,7 +19,7 @@ public class QuestionServiceManager implements QuestionService {
     }
 
     @Override
-    public Question getRandomQuestion() {
-        return questionRepository.getRandomQuestion();
+    public Question getRandomQuestionByCourse(Course course) {
+        return questionRepository.getRandomQuestionByCourse(course);
     }
 }

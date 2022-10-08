@@ -7,6 +7,6 @@ public class QuestionMapper {
     public static QuestionResponse toQuestionResponse (Question question)
     {
         return new QuestionResponse(question.getId(), question.getQuestion(),
-                question.getRightAnswer().getId());
+                question.getRightAnswer().getId(), question.getCourse().getId());
     }
 }

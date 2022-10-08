@@ -1,5 +1,6 @@
 package com.company.insuranceapp.repository;
 
+import com.company.insuranceapp.model.entity.Course;
 import com.company.insuranceapp.model.entity.Question;
 import org.springframework.stereotype.Repository;
 
@@ -10,13 +11,13 @@ import java.util.List;
 import java.util.Random;
 
 @Repository
-public class QuestionRepositoryCustomImpl implements QuestionRepositoryCustom{
+public class QuestionRepositoryCustomImpl implements QuestionRepositoryCustom {
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
-    public Question getRandomQuestion() {
-        Query query = entityManager.createQuery("select q.id from Question q");
+    public Question getRandomQuestionByCourse(Course course) {
+        Query query = entityManager.createQuery("select q.id from Question q where q.course=:course");
         List<Long> ids = query.getResultList();
 
         Random random = new Random();

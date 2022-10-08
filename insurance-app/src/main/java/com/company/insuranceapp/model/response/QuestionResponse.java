@@ -9,4 +9,5 @@ public class QuestionResponse {
     private Long id;
     private String question;
     private Long rightAnswerId;
+    private Long courseId;
 }

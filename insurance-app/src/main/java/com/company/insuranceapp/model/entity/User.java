@@ -47,7 +47,7 @@ public class User {
     private String password;
 
     @Column(columnDefinition = "int default 0")
-    private Long point;
+    private long point;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "users_roles",
