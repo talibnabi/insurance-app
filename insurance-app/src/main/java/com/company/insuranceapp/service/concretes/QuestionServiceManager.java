@@ -7,6 +7,8 @@ import com.company.insuranceapp.service.abstracts.QuestionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class QuestionServiceManager implements QuestionService {
@@ -22,4 +24,10 @@ public class QuestionServiceManager implements QuestionService {
     public Question getRandomQuestionByCourse(Course course) {
         return questionRepository.getRandomQuestionByCourse(course);
     }
+
+    @Override
+    public List<Question> getAllQuestion() {
+        return questionRepository.findAll();
+    }
+
 }

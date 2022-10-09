@@ -1,7 +1,6 @@
 package com.company.insuranceapp.model.response;
 
 
-import com.company.insuranceapp.model.entity.Question;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -12,6 +11,6 @@ public class AnswerResponse {
 
     private String answer;
 
-    private Question question;
+    private QuestionResponse questionResponse;
 
 }

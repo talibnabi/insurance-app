@@ -9,7 +9,7 @@ import java.util.List;
 public class AnswerMapper {
     public static AnswerResponse toAnswerResponse(Answer answer) {
         return new AnswerResponse(answer.getId(), answer.getAnswer(),
-                answer.getQuestion());
+                QuestionMapper.toQuestionResponse(answer.getQuestion()));
     }
 
     public static List<AnswerResponse> toAnswerResponse(List<Answer> answers) {
